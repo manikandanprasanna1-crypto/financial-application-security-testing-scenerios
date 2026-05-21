@@ -1,1 +1,35 @@
+Server Information Disclosure
+Scenario
 
+Server Information Disclosure
+
+Description
+
+The website shows server details like Apache, Nginx, IIS, PHP version, etc.
+
+Test Steps
+Open the website.
+Right click → Inspect → Network tab.
+Reload the page.
+Check response headers.
+Look for:
+Server
+X-Powered-By
+Expected Issue
+
+Server name/version is visible.
+
+Risk
+
+Hackers can identify server technology and attack known vulnerabilities.
+
+Mitigation
+Hide server details.
+Remove unnecessary response headers.
+Tools Can Be Used
+Burp Suite
+Browser DevTools
+curl
+Severity
+
+Medium
